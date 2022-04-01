@@ -6,10 +6,12 @@
         <script>
             function setup() {
                 createCanvas(400, 400);
-                background('wheat');
-                rect(100, 100, 100);
-                fill(255, 0, 255, 100);
-                rect(150, 150, 100);
+                background(220);
+            }
+
+            function draw() {
+                console.log(random(400));
+                circle(random(400), random(400), random(100));
             }
         </script>
     </body>
