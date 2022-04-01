@@ -6,15 +6,17 @@
         <script>
             function setup() {
                 createCanvas(windowWidth, windowHeight);
-                x = 0;
-                y = 0;
+                background(220);
             }
 
             function draw() {
-                background(220);
-                x = x + 10;
-                y = y + 5;
-                circle(x, y, 100);
+                console.log('mouseIsPressed', mouseIsPressed);
+                circle(mouseX + random(-5, 5), mouseY + random(-5, 5), random(60));
+
+            }
+
+            function mousePressed() {
+                background(random(250), random(255), random(255));
             }
         </script>
     </body>
