@@ -10,13 +10,10 @@
             }
 
             function draw() {
-                console.log('mouseIsPressed', mouseIsPressed);
-                circle(mouseX + random(-5, 5), mouseY + random(-5, 5), random(60));
-
-            }
-
-            function mousePressed() {
-                background(random(250), random(255), random(255));
+                px = pow(mouseX-pmouseX, 2);
+                py = pow(mouseY-pmouseY, 2);
+                speed = sqrt(px+py);
+                circle(mouseX, mouseY, speed);
             }
         </script>
     </body>
