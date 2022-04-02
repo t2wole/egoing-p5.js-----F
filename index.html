@@ -17,8 +17,15 @@
 
             function draw() {
                 translate(width/2, height/2);
-                degree = degree + 10;
-                circle(cos(degreeToRad(degree))*size, sin(degreeToRad(degree))*size, 10);
+                degree = degree + 1;
+                rad = degreeToRad(degree);
+                console.log(degree, rad);
+                fill('white');
+                circle(Math.cos(rad)*size, Math.sin(rad)*size, 10);
+                fill('red');
+                circle(Math.cos(rad)*size, 0, 10);
+                fill('yellow');
+                circle(0, Math.sin(rad)*size, 10);
             }
         </script>
     </body>
