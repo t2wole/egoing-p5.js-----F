@@ -6,14 +6,19 @@
         <script>
             function setup() {
                 createCanvas(windowWidth, windowHeight);
-                background(220);
+                background('black');
+                size = 200;
+                degree = 0;
+            }
+
+            function degreeToRad(degree){
+                return degree * Math.PI / 180;
             }
 
             function draw() {
-                px = pow(mouseX-pmouseX, 2);
-                py = pow(mouseY-pmouseY, 2);
-                speed = sqrt(px+py);
-                circle(mouseX, mouseY, speed);
+                translate(width/2, height/2);
+                degree = degree + 10;
+                circle(cos(degreeToRad(degree))*size, sin(degreeToRad(degree))*size, 10);
             }
         </script>
     </body>
